@@ -1,0 +1,72 @@
+<p-table
+  [value]="foros"
+  styleClass="p-datatable-striped"
+  [tableStyle]="{ 'min-width': '50rem' }"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th class="text-primary text-2xl font-semibold">
+        Foros abiertos
+        <p class="text-base font-light text-bluegray-500">
+          Comparte tus experiencias!
+        </p>
+      </th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-foro>
+    <tr>
+      <td>
+        <div>
+          <p>
+            <span>Imagen</span>
+            <span
+              class="text-2xl ml-4 text-primary font-semibold"
+              style="cursor: pointer"
+              >{{ foro.titulo | titlecase }}</span
+            >
+          </p>
+        </div>
+      </td>
+      <td>
+        <div class="flex flex-column align-items-center justify-content-center">
+          <h5 class="mb-0">Publicaciones</h5>
+          <p>{{ foro.publicaciones }}</p>
+        </div>
+      </td>
+      <td>
+        <div class="flex flex-column align-items-center justify-content-center">
+          <h5 class="mb-0">Comentarios</h5>
+          <p>
+            {{ foro.comentarios }}
+          </p>
+        </div>
+      </td>
+      <td>
+        <div class="flex flex-row">
+          <div class="col-3">
+            <p-avatar
+              label="T"
+              class="relative moved"
+              size="xlarge"
+              shape="circle"
+            ></p-avatar>
+          </div>
+          <div
+            class="col-9 flex flex-column justify-content-center align-items-center ml-2"
+          >
+            <p class="mb-0">nombre del post</p>
+            <p class="mt-0">
+              <span class="text-600">{{ foro.ultimaInteraccion }}</span>
+              <span class="text-primary ml-3 text-lg" style="cursor: pointer">{{
+                foro.ultimoUsuario
+              }}</span>
+            </p>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

@@ -1,0 +1,32 @@
+<div class="px-2 pt-2 bg-auto bg-primary text-primary">
+  <div class="grid flex gap-3">
+    <div class="col-10 col-offset-1">Logo</div>
+    <div class="col-10 col-offset-1">
+      <p-menubar [model]="items" styleClass="text-sm py-2">
+        <ng-template pTemplate="end">
+          <input type="text" pInputText placeholder="Buscar" class="w-full" />
+        </ng-template>
+      </p-menubar>
+    </div>
+  </div>
+</div>
+<p-dialog
+  header="Login"
+  [(visible)]="visibleLogin"
+  [modal]="true"
+  [style]="{ width: '50vw' }"
+  [draggable]="false"
+  [resizable]="false"
+>
+  <app-login />
+</p-dialog>
+<p-dialog
+  header="Header"
+  [(visible)]="visibleRegister"
+  [modal]="true"
+  [style]="{ width: '50vw' }"
+  [draggable]="false"
+  [resizable]="false"
+>
+  <app-register />
+</p-dialog>

@@ -1,0 +1,62 @@
+<form [formGroup]="formulario">
+  <p-divider></p-divider>
+  <div class="grid">
+    <div class="col-4 col-offset-1 flex justify-content-end">
+      <p class="mr-2 mb-2">Ingresa tus credenciales:</p>
+    </div>
+    <p-divider layout="vertical"></p-divider>
+    <div class="col-6 flex flex-column gap-4">
+      <span class="p-float-label">
+        <input
+          type="text"
+          pInputText
+          formControlName="correo"
+          id="correo"
+          class="w-full"
+        />
+        <label htmlFor="correo">Correo</label>
+      </span>
+      <span class="p-float-label">
+        <p-password
+          formControlName="password"
+          [toggleMask]="true"
+          id="password"
+          [feedback]="false"
+        >
+        </p-password>
+        <label htmlFor="password">Contraseña</label>
+      </span>
+      <div class="flex flex-row flex-nowrap">
+        <p class="mr-3">Mantener sesion iniciada?</p>
+        <p-toggleButton
+          formControlName="isAlwaysLogged"
+          onLabel="Si"
+          offLabel="No"
+          class="inline"
+        ></p-toggleButton>
+      </div>
+    </div>
+  </div>
+  <p-divider></p-divider>
+  <div class="col-12 flex justify-content-center">
+    <p-button
+      icon="pi pi-check"
+      label="Ingresar"
+      class="mt-4"
+      [disabled]="formulario.invalid"
+      type="submit"
+    >
+    </p-button>
+  </div>
+  <p-divider></p-divider>
+  <div class="col-12 flex flex-row flex-nowrap justify-content-center">
+    <p class="mt-5 mx-4">No estas registrado?</p>
+    <p-button icon="pi pi-user-plus" label="Registrarse" class="mt-4">
+    </p-button>
+  </div>
+  <p-divider align="center"><p class="font-bold">Tambien puedes</p></p-divider>
+  <div class="col-12 flex flex-row flex-nowrap justify-content-center">
+    <p class="mt-5 mx-4">Ingresar con twitter</p>
+    <p-button icon="pi pi-twitter" label="Twitter" class="mt-4"> </p-button>
+  </div>
+</form>
