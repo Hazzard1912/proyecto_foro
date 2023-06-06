@@ -25,13 +25,17 @@
             <span
               class="text-2xl ml-4 text-primary font-semibold"
               style="cursor: pointer"
-              >{{ foro.titulo | titlecase }}</span
+              [attr.data-titulo]="foro.titulo"
+              (click)="navegar($event)"
+              >{{ foro.titulo | replace | titlecase }}</span
             >
           </p>
         </div>
       </td>
       <td>
-        <div class="flex flex-column align-items-center justify-content-center">
+        <div
+          class="flex flex-column align-items-center justify-content-center m-0"
+        >
           <h5 class="mb-0">Publicaciones</h5>
           <p>{{ foro.publicaciones }}</p>
         </div>
@@ -60,7 +64,7 @@
             <p class="mb-0">nombre del post</p>
             <p class="mt-0">
               <span class="text-600">{{ foro.ultimaInteraccion }}</span>
-              <span class="text-primary ml-3 text-lg" style="cursor: pointer">{{
+              <span class="text-primary ml-3 text-lg hover:underline" style="cursor: pointer">{{
                 foro.ultimoUsuario
               }}</span>
             </p>

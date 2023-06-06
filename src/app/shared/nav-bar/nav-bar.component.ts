@@ -7,6 +7,7 @@ import { MenuItem } from 'primeng/api';
 import { LoginComponent } from '../components/login/login.component';
 import { RegisterComponent } from '../components/register/register.component';
 import { DialogModule } from 'primeng/dialog';
+import { MembresiasComponent } from 'src/app/pages/home/components/membresias/membresias.component';
 
 enum Gender {
   Masculino = 'Masculino',
@@ -32,6 +33,7 @@ interface User {
     DialogModule,
     LoginComponent,
     RegisterComponent,
+    MembresiasComponent,
   ],
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css'],

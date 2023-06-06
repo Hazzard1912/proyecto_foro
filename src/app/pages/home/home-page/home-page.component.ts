@@ -9,7 +9,6 @@ import { MiembrosActivosComponent } from '../components/miembros-activos/miembro
   standalone: true,
   imports: [
     CommonModule,
-    MembresiasComponent,
     ForosComponent,
     MiembrosActivosComponent,
   ],

@@ -5,3 +5,14 @@ export interface Foro {
   ultimaInteraccion: any;
   ultimoUsuario: string;
 }
+
+export interface Publicacion {
+  titulo: string;
+  contenido: string;
+  autor: string;
+  respuestas: number;
+  vistas: number;
+  ultimoUsuario: string;
+  fechaUltimoComentario: any;
+  fechaCreacion: any;
+}
